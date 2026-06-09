@@ -220,26 +220,6 @@ function setupButtonMicroInteractions() {
   });
 }
 
-function setupForm() {
-  const form = document.querySelector(".contact-form");
-  if (!form) return;
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const button = form.querySelector("button");
-    const originalText = button.textContent;
-
-    button.textContent = "Mensagem enviada";
-    button.disabled = true;
-
-    window.setTimeout(() => {
-      button.textContent = originalText;
-      button.disabled = false;
-      form.reset();
-    }, 2200);
-  });
-}
-
 window.addEventListener("resize", resizeCanvas);
 window.addEventListener("beforeunload", () => window.cancelAnimationFrame(animationFrame));
 
@@ -252,4 +232,3 @@ setupActiveNavigation();
 setupScrollParallax();
 setupHeroParallax();
 setupButtonMicroInteractions();
-setupForm();
