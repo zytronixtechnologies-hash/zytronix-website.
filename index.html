@@ -7,37 +7,71 @@
   data-netlify="true"
   netlify
   netlify-honeypot="bot-field"
+  enctype="application/x-www-form-urlencoded"
 >
   <input type="hidden" name="form-name" value="contato" />
 
   <p hidden>
-    <label>Não preencha: <input name="bot-field" /></label>
+    <label>
+      Não preencha:
+      <input name="bot-field" />
+    </label>
   </p>
 
   <label>
     Nome
-    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input
+      type="text"
+      name="nome"
+      placeholder="Seu nome"
+      required
+    />
   </label>
 
   <label>
     E-mail
-    <input type="email" name="email" placeholder="voce@empresa.com" required />
+    <input
+      type="email"
+      name="email"
+      placeholder="voce@empresa.com"
+      required
+    />
   </label>
 
   <label>
     Telefone
-    <input type="tel" name="telefone" placeholder="(61) 99999-9999" required />
+    <input
+      type="tel"
+      name="telefone"
+      placeholder="(61) 99999-9999"
+      required
+    />
   </label>
 
   <label>
     Empresa
-    <input type="text" name="empresa" placeholder="Nome da empresa" required />
+    <input
+      type="text"
+      name="empresa"
+      placeholder="Nome da empresa"
+      required
+    />
   </label>
 
   <label>
     Mensagem
-    <textarea name="mensagem" rows="4" placeholder="Descreva o que precisa automatizar" required></textarea>
+    <textarea
+      name="mensagem"
+      rows="4"
+      placeholder="Descreva o que precisa automatizar"
+      required
+    ></textarea>
   </label>
 
-  <button class="button button-primary" type="submit">Solicitar orçamento</button>
+  <button
+    class="button button-primary"
+    type="submit"
+  >
+    Solicitar orçamento
+  </button>
 </form>
