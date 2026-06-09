@@ -123,8 +123,6 @@ function setupLoading() {
 }
 
 function setupMenu() {
-  if (!menuButton || !menu) return;
-
   menuButton.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("is-open");
     document.body.classList.toggle("menu-open", isOpen);
@@ -226,13 +224,19 @@ function setupForm() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
 
-  form.addEventListener("submit", () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
     const button = form.querySelector("button");
+    const originalText = button.textContent;
 
-    if (!button) return;
-
-    button.textContent = "Enviando...";
+    button.textContent = "Mensagem enviada";
     button.disabled = true;
+
+    window.setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+      form.reset();
+    }, 2200);
   });
 }
 
