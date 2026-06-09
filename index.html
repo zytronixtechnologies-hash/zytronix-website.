@@ -231,9 +231,15 @@
               <span>Plano técnico com próximos passos</span>
             </div>
           </div>
-          <form class="contact-form" action="#" method="post">
-            <label>
-              Nome
+         <form class="contact-form"
+            name="contato"
+            method="POST"
+            data-netlify="true">
+
+        <input type="hidden" name="form-name" value="contato">
+
+        <label>
+          Nome
               <input type="text" name="name" placeholder="Seu nome" required />
             </label>
             <label>
